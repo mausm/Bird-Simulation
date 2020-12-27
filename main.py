@@ -70,7 +70,7 @@ def update_headings(boardmax, pos_arr, heading_list):
         locations = results[1][1:]
 
         # Rule 1, avoid others
-        if min(results[0] < min_dist):
+        if min(results[0]) < min_dist:
             direct_neighbor_index = np.where(distances == min(distances))[0][0]
             dist = np.subtract(bird, pos_arr[direct_neighbor_index])
 
